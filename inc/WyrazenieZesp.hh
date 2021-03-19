@@ -4,8 +4,6 @@
 
 
 #include "LZespolona.hh"
-
-
 /*!
  * Modeluje zbior operatorow arytmetycznych.
  */
@@ -31,5 +29,7 @@ struct WyrazenieZesp {
 
 void Wyswietl(WyrazenieZesp  WyrZ);
 LZespolona Oblicz(WyrazenieZesp  WyrZ);
+WyrazenieZesp wczytaj_Wz();
+istream& operator>>(istream& in, WyrazenieZesp &wynik);
 
 #endif
