@@ -44,34 +44,22 @@ int main(int argc, char **argv)
   cout << endl;
 */
 
-/*LZespolona W1, W2, W3;
- W1.re = 20;
- W1.im = 9;
- W2.re = 6;
- W2.im = -1;
- Wyswietl(W1);
+LZespolona W1, W2, W3;
+cin>>W1;
+cin>>W2;
+ cout<<W1;
  cout<<endl;
- Wyswietl(W2);
+ cout<<W2;
  W3 = W1/W2;
  cout<<endl;
- Wyswietl(W3);
+ cout<<W3;
  cout<<endl;
  WyrazenieZesp A1;
- A1.Arg1 = W1;
- A1.Op = Op_Dziel;
- A1.Arg2 = W2;
+ cin>>A1;
  cout<<endl;
- Wyswietl(A1);
+ cout<<A1;
  W3 = Oblicz(A1);
  cout<<endl;
- Wyswietl(W3);*/
-
-
-
-WyrazenieZesp wynik;
-wynik = wczytaj_Wz();
-Wyswietl(wynik);
-LZespolona W1;
-cin>>W1;
+ cout<<W3;
 
 }

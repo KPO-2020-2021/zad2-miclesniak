@@ -1,5 +1,6 @@
 #include "LZespolona.hh"
 #include <cmath>
+#include <iostream>
 
 #define MIN_DIFF 0.00001
 
@@ -85,6 +86,12 @@ LZespolona  operator / (LZespolona  Skl1,  double  Skl2){
   Wynik.im = Skl1.im / Skl2;
   return Wynik;
 }
+LZespolona Sprzezenie(LZespolona Skl){
+  LZespolona temp;
+  temp.re = Skl.re;
+  temp.im = - Skl.im;
+  return temp;
+}
 
 double Modul2(LZespolona Skl)
 {
@@ -164,4 +171,12 @@ istream& operator>>(istream& in,LZespolona &wynik){
   }
 
   return in;
+}
+
+ostream& operator<<(ostream &out,LZespolona &Skl){
+   out<<"("<<Skl.re;
+  if(Skl.im>=0)
+    out<<"+";
+  out<<Skl.im<<"i)";
+  return out;
 }

@@ -1,5 +1,6 @@
 #include "WyrazenieZesp.hh"
 #include <iostream>
+
 using namespace std;
 /*
  * Tu nalezy zdefiniowac funkcje, ktorych zapowiedzi znajduja sie
@@ -86,7 +87,7 @@ WyrazenieZesp wczytaj_Wz(){
     return  temp;
 }
 
-istream& operator>>(istream& in, WyrazenieZesp &temp){
+std::istream& operator>>(istream& in, WyrazenieZesp &temp){
     in>>temp.Arg1;
     char znak;
     in>>znak;
@@ -118,4 +119,31 @@ istream& operator>>(istream& in, WyrazenieZesp &temp){
     }
     in>>temp.Arg2;
     return  in;
+}
+
+std::ostream& operator<<(ostream &out, WyrazenieZesp  &WyrZ){
+    out<<WyrZ.Arg1;
+    switch (WyrZ.Op)
+    {
+    case 0:
+        out<<'+';
+        break;
+    
+    case 1:
+        out<<'-';
+        break;
+
+    case 2:
+        out<<'*';
+        break;
+
+    case 3:
+        out<<'/';
+        break;
+
+    default:
+        break;
+    }
+    out<<WyrZ.Arg2;
+    return out;
 }
