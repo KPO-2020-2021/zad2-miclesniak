@@ -50,7 +50,7 @@ cin>>W2;
  cout<<W1;
  cout<<endl;
  cout<<W2;
- W3 = W1/W2;
+ W3 = W1*W2;
  cout<<endl;
  cout<<W3;
  cout<<endl;

@@ -24,11 +24,12 @@ struct  LZespolona {
   double Modul2() const;
   void Wyswietl() const;
   bool  operator == (LZespolona  Skl2) const;
+  LZespolona wczytaj_l();
 
 };
   std::istream& operator>>(std::istream& in,LZespolona &wynik);
   std::ostream& operator<<(std::ostream &out,LZespolona &Skl);
-  LZespolona wczytaj_l();
+  
 /*
  * Dalej powinny pojawic sie zapowiedzi definicji przeciazen operatorow
  */

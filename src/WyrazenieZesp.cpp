@@ -31,6 +31,7 @@ LZespolona WyrazenieZesp::Oblicz(){
     return Wynik;
 }
 
+
 void WyrazenieZesp::Wyswietl(){
     Arg1.Wyswietl();
     switch (this->Op)
@@ -58,33 +59,32 @@ void WyrazenieZesp::Wyswietl(){
 }
 
 WyrazenieZesp WyrazenieZesp::wczytaj_Wz(){
-    WyrazenieZesp temp;
-    temp.Arg1 = wczytaj_l();
+    Arg1.wczytaj_l();
     char znak;
     cin>>znak;
     switch (znak)
     {
     case '+':
-        temp.Op = Op_Dodaj;
+        this->Op = Op_Dodaj;
         break;
     
     case '-':
-        temp.Op = Op_Odejmij;
+        this->Op = Op_Odejmij;
         break;
 
     case '*':
-        temp.Op = Op_Mnoz;
+        this->Op = Op_Mnoz;
         break;
 
     case '/':
-        temp.Op = Op_Dziel;
+        this->Op = Op_Dziel;
         break;
 
     default:
         break;
     }
-    temp.Arg2 = wczytaj_l();
-    return  temp;
+    Arg2.wczytaj_l();
+    return  *this;
 }
 
 std::istream& operator>>(istream& in, WyrazenieZesp &temp){

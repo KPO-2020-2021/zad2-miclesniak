@@ -3,7 +3,7 @@
 #include <iostream>
 #include <stdexcept>
 
-#define MIN_DIFF 0.00001
+#define MIN_DIFF 0.01
 
 using namespace std;
 
@@ -19,10 +19,8 @@ using namespace std;
 bool  LZespolona::operator == (LZespolona  Skl2) const{
   if ((this->re == Skl2.re) && (this->im == Skl2.im))
     return true;
-  else
-    return false;
   //alternatywnie, dla MIN_DIFF i wyników od użytkownika
-  if (abs(this->re - Skl2.re) <= MIN_DIFF && abs(this->im - Skl2.im) <= MIN_DIFF)
+  else if (abs(this->re - Skl2.re) <= MIN_DIFF && abs(this->im - Skl2.im) <= MIN_DIFF)
     return true;
   else
     return false;
@@ -46,16 +44,17 @@ LZespolona  LZespolona::operator + (LZespolona  Skl2) const{
 
 LZespolona LZespolona::operator-(LZespolona Skl2) const
 {
-  Skl2.re -= this->re;
-  Skl2.im -= this->im;
+  Skl2.re = this->re - Skl2.re;
+  Skl2.im = this->im - Skl2.im;
   return Skl2;
 }
 
 LZespolona LZespolona::operator*(LZespolona Skl2) const
 {
-  Skl2.re = (this->re * Skl2.re) - (this->im * Skl2.im);
-  Skl2.im = (this->re * Skl2.im) + (this->im * Skl2.re);
-  return Skl2;
+  LZespolona wynik;
+  wynik.re = (this->re * Skl2.re) - (this->im * Skl2.im);
+  wynik.im = (this->re * Skl2.im) + (this->im * Skl2.re);
+  return wynik;
 }
 
 LZespolona LZespolona::operator/(LZespolona Skl2) const
@@ -107,34 +106,33 @@ void LZespolona::Wyswietl() const{
   cout<<this->im<<"i)";
 }
 
-LZespolona wczytaj_l(){
+LZespolona LZespolona::wczytaj_l(){
   char temp;
-  LZespolona wynik;
   cin>>temp;
   if(temp != '('){
     cout<<"blad";
-    return wynik;
+    return *this;
   }
-  cin>>wynik.re;
+  cin>>re;
   if(cin.fail()){
-    return wynik;
+    return *this;
   }
-  cin>>wynik.im;
+  cin>>im;
   if(cin.fail()){
-    return wynik;
+    return *this;
   }
   cin>>temp;
   if(temp != 'i'){
     cout<<"blad";
-    return wynik;
+    return *this;
   }
   cin>>temp;
   if(temp != ')'){
     cout<<"blad";
-    return wynik;
+    return *this;
   }
 
-  return wynik;
+  return *this;
 }
 
 istream& operator>>(istream& in,LZespolona &wynik){
