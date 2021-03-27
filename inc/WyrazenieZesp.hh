@@ -17,19 +17,17 @@ struct WyrazenieZesp {
   LZespolona   Arg1;   // Pierwszy argument wyrazenia arytmetycznego
   Operator     Op;     // Opertor wyrazenia arytmetycznego
   LZespolona   Arg2;   // Drugi argument wyrazenia arytmetycznego
+
+  void Wyswietl();
+  LZespolona Oblicz();
+  WyrazenieZesp wczytaj_Wz();
 };
 
-
+  std::istream& operator>>(std::istream& in, WyrazenieZesp &temp);
+  std::ostream& operator<<(std::ostream &out, WyrazenieZesp &temp);
 /*
  * Funkcje ponizej nalezy zdefiniowac w module.
  *
  */
-
-
-void Wyswietl(WyrazenieZesp  WyrZ);
-LZespolona Oblicz(WyrazenieZesp  WyrZ);
-WyrazenieZesp wczytaj_Wz();
-std::istream& operator>>(std::istream& in, WyrazenieZesp &wynik);
-std::ostream& operator<<(std::ostream &out, WyrazenieZesp  &WyrZ);
 
 #endif

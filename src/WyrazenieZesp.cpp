@@ -6,24 +6,24 @@ using namespace std;
  * Tu nalezy zdefiniowac funkcje, ktorych zapowiedzi znajduja sie
  * w pliku naglowkowym.
  */
-LZespolona Oblicz(WyrazenieZesp  WyrZ){
+LZespolona WyrazenieZesp::Oblicz(){
     LZespolona Wynik;
-    switch (WyrZ.Op)
+    switch (this->Op)
     {
     case 0:
-        Wynik = WyrZ.Arg1 + WyrZ.Arg2;
+        Wynik = this->Arg1 + this->Arg2;
         break;
     
     case 1:
-        Wynik = WyrZ.Arg1 - WyrZ.Arg2;
+        Wynik = this->Arg1 - this->Arg2;
         break;
 
     case 2:
-        Wynik = WyrZ.Arg1 * WyrZ.Arg2;
+        Wynik = this->Arg1 * this->Arg2;
         break;
     
     case 3:
-        Wynik = WyrZ.Arg1 / WyrZ.Arg2;
+        Wynik = this->Arg1 / this->Arg2;
     
     default:
         break;
@@ -31,9 +31,9 @@ LZespolona Oblicz(WyrazenieZesp  WyrZ){
     return Wynik;
 }
 
-void Wyswietl(WyrazenieZesp  WyrZ){
-    Wyswietl(WyrZ.Arg1);
-    switch (WyrZ.Op)
+void WyrazenieZesp::Wyswietl(){
+    Arg1.Wyswietl();
+    switch (this->Op)
     {
     case 0:
         cout<<'+';
@@ -54,10 +54,10 @@ void Wyswietl(WyrazenieZesp  WyrZ){
     default:
         break;
     }
-    Wyswietl(WyrZ.Arg2);
+    Arg2.Wyswietl();
 }
 
-WyrazenieZesp wczytaj_Wz(){
+WyrazenieZesp WyrazenieZesp::wczytaj_Wz(){
     WyrazenieZesp temp;
     temp.Arg1 = wczytaj_l();
     char znak;
@@ -121,9 +121,9 @@ std::istream& operator>>(istream& in, WyrazenieZesp &temp){
     return  in;
 }
 
-std::ostream& operator<<(ostream &out, WyrazenieZesp  &WyrZ){
-    out<<WyrZ.Arg1;
-    switch (WyrZ.Op)
+std::ostream& operator<<(ostream &out, WyrazenieZesp &temp){
+    out<<temp.Arg1;
+    switch (temp.Op)
     {
     case 0:
         out<<'+';
@@ -144,6 +144,6 @@ std::ostream& operator<<(ostream &out, WyrazenieZesp  &WyrZ){
     default:
         break;
     }
-    out<<WyrZ.Arg2;
+    out<<temp.Arg2;
     return out;
 }

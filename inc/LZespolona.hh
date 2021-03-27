@@ -13,27 +13,24 @@
  */
 struct  LZespolona {
   double   re;    /*! Pole repezentuje czesc rzeczywista. */
-  double   im;    /*! Pole repezentuje czesc urojona. */
+  double  im;    /*! Pole repezentuje czesc urojona. */
+
+  LZespolona  operator + (LZespolona  Skl2) const;
+  LZespolona operator / (double Skl2) const;
+  LZespolona  operator - (LZespolona  Skl2) const;
+  LZespolona  operator * (LZespolona  Skl2) const;
+  LZespolona  operator / (LZespolona  Skl2) const;
+  LZespolona Sprzezenie() const;
+  double Modul2() const;
+  void Wyswietl() const;
+  bool  operator == (LZespolona  Skl2) const;
+
 };
-
-
+  std::istream& operator>>(std::istream& in,LZespolona &wynik);
+  std::ostream& operator<<(std::ostream &out,LZespolona &Skl);
+  LZespolona wczytaj_l();
 /*
  * Dalej powinny pojawic sie zapowiedzi definicji przeciazen operatorow
  */
-
-bool  operator == (LZespolona  Skl1,  LZespolona  Skl2);
-
-LZespolona  operator + (LZespolona  Skl1,  LZespolona  Skl2);
-
-LZespolona operator / (LZespolona Skl1, double Skl2);
-LZespolona  operator - (LZespolona  Skl1,  LZespolona  Skl2);
-LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2);
-LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2);
-LZespolona Sprzezenie(LZespolona Skl);
-double Modul2(LZespolona Skl);
-void Wyswietl(LZespolona Skl);
-LZespolona wczytaj_l();
-std::istream& operator>>(std::istream& in,LZespolona &wynik);
-std::ostream& operator<<(std::ostream &out,LZespolona &Skl);
 
 #endif

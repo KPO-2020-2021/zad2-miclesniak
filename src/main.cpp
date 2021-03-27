@@ -58,7 +58,7 @@ cin>>W2;
  cin>>A1;
  cout<<endl;
  cout<<A1;
- W3 = Oblicz(A1);
+ W3 = A1.Oblicz();
  cout<<endl;
  cout<<W3;
 
