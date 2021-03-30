@@ -1,37 +1,30 @@
 #ifndef LZESPOLONA_HH
 #define LZESPOLONA_HH
 #include <iostream>
-/*!
- *  Plik zawiera definicje struktury LZesplona oraz zapowiedzi
- *  przeciazen operatorow arytmetycznych dzialajacych na tej 
- *  strukturze.
- */
 
 
-/*!
- * Modeluje pojecie liczby zespolonej
+
+/**
+ * @brief Modeluje pojecie liczby zespolonej ktora zawiera czesc rzeczywista i zespolona typu double
  */
 struct  LZespolona {
-  double   re;    /*! Pole repezentuje czesc rzeczywista. */
-  double  im;    /*! Pole repezentuje czesc urojona. */
-
-  LZespolona  operator + (LZespolona  Skl2) const;
-  LZespolona operator / (double Skl2) const;
-  LZespolona  operator - (LZespolona  Skl2) const;
-  LZespolona  operator * (LZespolona  Skl2) const;
-  LZespolona  operator / (LZespolona  Skl2) const;
+  double   re;    
+  double  im;    
+  LZespolona  operator + (const LZespolona  Skl2) const;
+  LZespolona operator / (const double Skl2) const;
+  LZespolona  operator - (const LZespolona  Skl2) const;
+  LZespolona  operator * (const LZespolona  Skl2) const;
+  LZespolona  operator / (const LZespolona  Skl2) const;
   LZespolona Sprzezenie() const;
   double Modul2() const;
   void Wyswietl() const;
-  bool  operator == (LZespolona  Skl2) const;
-  LZespolona wczytaj_l();
+  bool  operator == (const LZespolona  Skl2) const;
+  bool wczytaj_l();
 
 };
   std::istream& operator>>(std::istream& in,LZespolona &wynik);
-  std::ostream& operator<<(std::ostream &out,LZespolona &Skl);
+  std::ostream& operator<<(std::ostream &out,const LZespolona &Skl);
   
-/*
- * Dalej powinny pojawic sie zapowiedzi definicji przeciazen operatorow
- */
+
 
 #endif

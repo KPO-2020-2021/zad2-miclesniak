@@ -1,0 +1,11 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,187,60,213"/>
+<area shape="rect" id="node2" href="$structstat.html#ad2d6a21f368f86247404682ff8ced5a5" title="Funkcja inkrementuje licznik niepoprawnych odpowiedzi." alt="" coords="116,5,299,32"/>
+<area shape="rect" id="node3" href="$structstat.html#abcac9d74d2a31fe99b83b25349ab7634" title="Funkcja inkrementuje licznki poprawnych odpowiedzi." alt="" coords="126,56,289,83"/>
+<area shape="rect" id="node4" href="$struct_baza_testu.html#af60f82b5aa9adc5d073253996f2abe3c" title="Inicjalizuje test kojarzac zmienna dostepna poprzez wskaznik wskBazaTestu z dana tablica wyrazen,..." alt="" coords="115,107,299,133"/>
+<area shape="rect" id="node5" href="$struct_wyrazenie_zesp.html#a1fe508230913565d061e5d107b59cd01" title="Funkcja Oblicza wartosc Wyrazenia Zespolonego." alt="" coords="122,157,293,184"/>
+<area shape="rect" id="node6" href="$struct_baza_testu.html#a04304682a903ddf95c7ef4db10f49ae0" title="Funkcja udostepnia nastepne pytania o ile jest odpowiednia ich ilosc." alt="" coords="108,209,307,250"/>
+<area shape="rect" id="node7" href="$struct_l_zespolona.html#aafc0ec3995526da3761f94a81a765cd9" title="Funkcja wczytywania liczby Zespolonej." alt="" coords="124,275,291,301"/>
+<area shape="rect" id="node8" href="$structstat.html#a961b9cf3d4e7e6f0ecb70f3418809afd" title="Funkcja Wyswietla Liczbe poprawnych i niepoprawnych odpowiedzi, jak i procent poprawnych odpowiedzi." alt="" coords="151,325,264,352"/>
+<area shape="rect" id="node9" href="$struct_wyrazenie_zesp.html#a2279dab032ecaeaabdeff36a1d8ee1b2" title="Funkcja wyswietla Wyrazenie Zespolone." alt="" coords="112,376,303,403"/>
+</map>

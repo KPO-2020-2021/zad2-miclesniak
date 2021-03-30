@@ -3,31 +3,32 @@
 #include <iostream>
 
 #include "LZespolona.hh"
-/*!
- * Modeluje zbior operatorow arytmetycznych.
+/**
+ * @brief Modeluje zbior operatorow arytmetycznych.
  */
-enum Operator { Op_Dodaj, Op_Odejmij, Op_Mnoz, Op_Dziel };
+enum Operator { Op_Dodaj,   /**< @brief Operacja dodawania*/
+                Op_Odejmij, /**< @brief Operacja odejmowania*/
+                Op_Mnoz,    /**< @brief Operacja mnozenia*/
+                Op_Dziel    /**< @brief Operacja dzielenia*/
+              };
 
 
 
-/*
- * Modeluje pojecie dwuargumentowego wyrazenia zespolonego
+/**
+ * @brief Modeluje pojecie dwuargumentowego wyrazenia zespolonego
  */
 struct WyrazenieZesp {
   LZespolona   Arg1;   // Pierwszy argument wyrazenia arytmetycznego
   Operator     Op;     // Opertor wyrazenia arytmetycznego
   LZespolona   Arg2;   // Drugi argument wyrazenia arytmetycznego
 
-  void Wyswietl();
-  LZespolona Oblicz();
-  WyrazenieZesp wczytaj_Wz();
+  void Wyswietl() const;
+  LZespolona Oblicz() const;
+  WyrazenieZesp wczytaj_Wz() ;
 };
 
   std::istream& operator>>(std::istream& in, WyrazenieZesp &temp);
-  std::ostream& operator<<(std::ostream &out, WyrazenieZesp &temp);
-/*
- * Funkcje ponizej nalezy zdefiniowac w module.
- *
- */
+  std::ostream& operator<<(std::ostream &out, const WyrazenieZesp &temp);
+
 
 #endif

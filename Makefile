@@ -4,7 +4,7 @@ SRC=./src
 INC=./inc
 TESTS=./tests
 TBIN=./tests/bin
-FLAGS= -Wall -pedantic -std=c++14 -iquote inc
+FLAGS= -g -Wall -pedantic -std=c++14 -iquote inc
 
 ${TRGDIR}/test_arytm_zesp: ${OBJ} ${OBJ}/main.o ${OBJ}/LZespolona.o\
                      ${OBJ}/WyrazenieZesp.o ${OBJ}/BazaTestu.o ${OBJ}/BazaTestu.o ${OBJ}/Statystyki.o
@@ -56,7 +56,7 @@ test:  ${TBIN}/test_1 ${TBIN}/test_2 ${TBIN}/test_3 ${TBIN}/test_4 ${TBIN}/test_
 	${TBIN}/test_4 
 	${TBIN}/test_5
 run:
-	${TRGDIR}/test_arytm_zesp latwy
+	${TRGDIR}/test_arytm_zesp trudny
 
 clean:
 	rm -f ${TRGDIR}/test_arytm_zesp ${OBJ}/* ${TBIN}/*

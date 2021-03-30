@@ -1,65 +1,76 @@
 #include <iostream>
 #include "BazaTestu.hh"
+#include "Statystyki.hh"
 
 using namespace std;
-
-
-
 
 int main(int argc, char **argv)
 {
 
- /* if (argc < 2) {
-    cout << endl;
+  if (argc < 2) 
+  {
+    cout << endl; 
     cout << " Brak opcji okreslajacej rodzaj testu." << endl;
     cout << " Dopuszczalne nazwy to:  latwy, trudny." << endl;
     cout << endl;
     return 1;
   }
 
+  BazaTestu BazaT = {nullptr, 0, 0}; 
 
-  BazaTestu   BazaT = { nullptr, 0, 0 };
-
-  if (InicjalizujTest(&BazaT,argv[1]) == false) {
+  if (BazaT.InicjalizujTest(argv[1]) == false)
+  {
     cerr << " Inicjalizacja testu nie powiodla sie." << endl;
     return 1;
   }
 
-
-  
   cout << endl;
   cout << " Start testu arytmetyki zespolonej: " << argv[1] << endl;
   cout << endl;
 
-  WyrazenieZesp   WyrZ_PytanieTestowe;
-  
-  while (PobierzNastpnePytanie(&BazaT,&WyrZ_PytanieTestowe)) {
-    cout << " Czesc rzeczywista pierwszego argumentu: ";
-    cout << WyrZ_PytanieTestowe.Arg1.re << endl;
+  WyrazenieZesp WyrZ_PytanieTestowe; 
+  LZespolona Odpowiedz, Wynik; 
+  stat s;
+  while (BazaT.PobierzNastpnePytanie(&WyrZ_PytanieTestowe))
+  {
+    try
+    {
+      Wynik = WyrZ_PytanieTestowe.Oblicz();
+      cout << endl
+                << "Oblicz dzialanie: ";
+      WyrZ_PytanieTestowe.Wyswietl();
+      cout << endl
+                << "Podaj poprawną odpowiedz" << endl;
+      if (Odpowiedz.wczytaj_l() == false)
+      {
+        s.dodaj_niepoprawna();
+        cout << "Poprawana odpowiedz to: " << endl;
+        cout << Wynik << endl;
+      }
+      else
+      {
+        if (Odpowiedz == Wynik)
+        {
+          s.dodaj_poprawna();
+          cout<<"Odpowiedz poprawna\n";
+        }
+        else
+        {
+          s.dodaj_niepoprawna();
+          cout << "Twoja odpowiedz to: " << Odpowiedz << endl;
+          cout << "Błąd! Poprawana odpowiedz to: " << endl;
+          cout << Wynik << endl;
+        }
+      }
+    }
+    catch(runtime_error &e)
+    {
+      cerr<<"W pytaniu wyktuto błąd"<<e.what()<<"Pytanie zostało pominięte";
+    }
   }
-
-  
   cout << endl;
   cout << " Koniec testu" << endl;
   cout << endl;
-*/
 
-LZespolona W1, W2, W3;
-cin>>W1;
-cin>>W2;
- cout<<W1;
- cout<<endl;
- cout<<W2;
- W3 = W1*W2;
- cout<<endl;
- cout<<W3;
- cout<<endl;
- WyrazenieZesp A1;
- cin>>A1;
- cout<<endl;
- cout<<A1;
- W3 = A1.Oblicz();
- cout<<endl;
- cout<<W3;
-
+  s.wyswietl();
 }

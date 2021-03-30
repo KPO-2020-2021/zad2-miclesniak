@@ -2,11 +2,13 @@
 #include <iostream>
 
 using namespace std;
-/*
- * Tu nalezy zdefiniowac funkcje, ktorych zapowiedzi znajduja sie
- * w pliku naglowkowym.
+
+/**
+ * @brief Funkcja Oblicza wartosc Wyrazenia Zespolonego
+ * 
+ * @return LZespolona Zwracana wartosc dzialania typu LZespolona
  */
-LZespolona WyrazenieZesp::Oblicz(){
+LZespolona WyrazenieZesp::Oblicz() const{
     LZespolona Wynik;
     switch (this->Op)
     {
@@ -31,8 +33,11 @@ LZespolona WyrazenieZesp::Oblicz(){
     return Wynik;
 }
 
-
-void WyrazenieZesp::Wyswietl(){
+/**
+ * @brief Funkcja wyswietla Wyrazenie Zespolone
+ * 
+ */
+void WyrazenieZesp::Wyswietl() const{
     Arg1.Wyswietl();
     switch (this->Op)
     {
@@ -57,7 +62,11 @@ void WyrazenieZesp::Wyswietl(){
     }
     Arg2.Wyswietl();
 }
-
+/**
+ * @brief Funkcja wczytuje Wyrazenie Zespolone
+ * 
+ * @return WyrazenieZesp Zwraca obiekt z wczytanymi danymi
+ */
 WyrazenieZesp WyrazenieZesp::wczytaj_Wz(){
     Arg1.wczytaj_l();
     char znak;
@@ -86,7 +95,13 @@ WyrazenieZesp WyrazenieZesp::wczytaj_Wz(){
     Arg2.wczytaj_l();
     return  *this;
 }
-
+/**
+ * @brief Funkcja przeciazenia operatora bitowego w prawo dla Wyrazen Zespolonych
+ * 
+ * @param in strumien wejsciowy z ktorego wczytujemy dane 
+ * @param temp Obiekt do ktorego wczytujemy dane  
+ * @return std::istream& strumien wejsciowy z ktorego pobralismy dane
+ */
 std::istream& operator>>(istream& in, WyrazenieZesp &temp){
     in>>temp.Arg1;
     char znak;
@@ -120,8 +135,14 @@ std::istream& operator>>(istream& in, WyrazenieZesp &temp){
     in>>temp.Arg2;
     return  in;
 }
-
-std::ostream& operator<<(ostream &out, WyrazenieZesp &temp){
+/**
+ * @brief Funkcja przeciazenia bitowego w lewo 
+ * 
+ * @param out Strumien na ktory wypisujemy dane
+ * @param temp Obiekt z ktorego wypisujemy dane 
+ * @return std::ostream& Strumien z zapisanymi danymi 
+ */
+std::ostream& operator<<(ostream &out,const WyrazenieZesp &temp){
     out<<temp.Arg1;
     switch (temp.Op)
     {

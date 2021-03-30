@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Liczby Zespolone: Plik źródłowy Statystyki.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Liczby Zespolone
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Test z Arytmetyki liczb Zespolonych</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Statystyki.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_statystyki_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef STATYSTYKI_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define STATYSTYKI_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_l_zespolona_8hh.html">LZespolona.hh</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_wyrazenie_zesp_8hh.html">WyrazenieZesp.hh</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structstat.html">   12</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structstat.html">stat</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structstat.html#aae37e34dd2c99e0c3f89084a487d2383">   14</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structstat.html#aae37e34dd2c99e0c3f89084a487d2383">l_poprawna</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structstat.html#aaa58a47e94ca034a46047b4c97c65d6c">   15</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structstat.html#aaa58a47e94ca034a46047b4c97c65d6c">l_niepoprawna</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structstat.html#ab89727a4198ffd032e194917596e156b">   17</a></span>&#160;    <a class="code" href="structstat.html#ab89727a4198ffd032e194917596e156b">stat</a>():<a class="code" href="structstat.html#aae37e34dd2c99e0c3f89084a487d2383">l_poprawna</a>(0),<a class="code" href="structstat.html#aaa58a47e94ca034a46047b4c97c65d6c">l_niepoprawna</a>(0){}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structstat.html#abcac9d74d2a31fe99b83b25349ab7634">dodaj_poprawna</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structstat.html#ad2d6a21f368f86247404682ff8ced5a5">dodaj_niepoprawna</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structstat.html#a961b9cf3d4e7e6f0ecb70f3418809afd">wyswietl</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructstat_html"><div class="ttname"><a href="structstat.html">stat</a></div><div class="ttdoc">Modeluje pojecie statystyki ktora zawiera l_poprawne i l_niepoprawna typu iny.</div><div class="ttdef"><b>Definition:</b> Statystyki.hh:12</div></div>
+<div class="ttc" id="astruct_baza_testu_html_a04304682a903ddf95c7ef4db10f49ae0"><div class="ttname"><a href="struct_baza_testu.html#a04304682a903ddf95c7ef4db10f49ae0">BazaTestu::PobierzNastpnePytanie</a></div><div class="ttdeci">bool PobierzNastpnePytanie(WyrazenieZesp *wskWyr)</div><div class="ttdoc">Funkcja udostepnia nastepne pytania o ile jest odpowiednia ich ilosc.</div><div class="ttdef"><b>Definition:</b> BazaTestu.cpp:118</div></div>
+<div class="ttc" id="astructstat_html_a961b9cf3d4e7e6f0ecb70f3418809afd"><div class="ttname"><a href="structstat.html#a961b9cf3d4e7e6f0ecb70f3418809afd">stat::wyswietl</a></div><div class="ttdeci">void wyswietl() const</div><div class="ttdoc">Funkcja Wyswietla Liczbe poprawnych i niepoprawnych odpowiedzi, jak i procent poprawnych odpowiedzi.</div><div class="ttdef"><b>Definition:</b> Statystyki.cpp:24</div></div>
+<div class="ttc" id="astruct_baza_testu_html_af60f82b5aa9adc5d073253996f2abe3c"><div class="ttname"><a href="struct_baza_testu.html#af60f82b5aa9adc5d073253996f2abe3c">BazaTestu::InicjalizujTest</a></div><div class="ttdeci">bool InicjalizujTest(const char *sNazwaTestu)</div><div class="ttdoc">Inicjalizuje test kojarzac zmienna dostepna poprzez wskaznik wskBazaTestu z dana tablica wyrazen,...</div><div class="ttdef"><b>Definition:</b> BazaTestu.cpp:79</div></div>
+<div class="ttc" id="astruct_l_zespolona_html"><div class="ttname"><a href="struct_l_zespolona.html">LZespolona</a></div><div class="ttdoc">Modeluje pojecie liczby zespolonej ktora zawiera czesc rzeczywista i zespolona typu double.</div><div class="ttdef"><b>Definition:</b> LZespolona.hh:10</div></div>
+<div class="ttc" id="amain_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> main.cpp:7</div></div>
+<div class="ttc" id="astructstat_html_ab89727a4198ffd032e194917596e156b"><div class="ttname"><a href="structstat.html#ab89727a4198ffd032e194917596e156b">stat::stat</a></div><div class="ttdeci">stat()</div><div class="ttdef"><b>Definition:</b> Statystyki.hh:17</div></div>
+<div class="ttc" id="astruct_l_zespolona_html_aafc0ec3995526da3761f94a81a765cd9"><div class="ttname"><a href="struct_l_zespolona.html#aafc0ec3995526da3761f94a81a765cd9">LZespolona::wczytaj_l</a></div><div class="ttdeci">bool wczytaj_l()</div><div class="ttdoc">Funkcja wczytywania liczby Zespolonej.</div><div class="ttdef"><b>Definition:</b> LZespolona.cpp:134</div></div>
+<div class="ttc" id="a_l_zespolona_8hh_html"><div class="ttname"><a href="_l_zespolona_8hh.html">LZespolona.hh</a></div></div>
+<div class="ttc" id="astructstat_html_aaa58a47e94ca034a46047b4c97c65d6c"><div class="ttname"><a href="structstat.html#aaa58a47e94ca034a46047b4c97c65d6c">stat::l_niepoprawna</a></div><div class="ttdeci">int l_niepoprawna</div><div class="ttdef"><b>Definition:</b> Statystyki.hh:15</div></div>
+<div class="ttc" id="a_statystyki_8hh_html"><div class="ttname"><a href="_statystyki_8hh.html">Statystyki.hh</a></div></div>
+<div class="ttc" id="astructstat_html_ad2d6a21f368f86247404682ff8ced5a5"><div class="ttname"><a href="structstat.html#ad2d6a21f368f86247404682ff8ced5a5">stat::dodaj_niepoprawna</a></div><div class="ttdeci">void dodaj_niepoprawna()</div><div class="ttdoc">Funkcja inkrementuje licznik niepoprawnych odpowiedzi.</div><div class="ttdef"><b>Definition:</b> Statystyki.cpp:16</div></div>
+<div class="ttc" id="astruct_baza_testu_html"><div class="ttname"><a href="struct_baza_testu.html">BazaTestu</a></div><div class="ttdoc">Modeluje pojecie baze testu z zestawem pytan w tablicy oraz informacji o maksymalnej ilosci pytan,...</div><div class="ttdef"><b>Definition:</b> BazaTestu.hh:13</div></div>
+<div class="ttc" id="a_baza_testu_8hh_html"><div class="ttname"><a href="_baza_testu_8hh.html">BazaTestu.hh</a></div></div>
+<div class="ttc" id="astruct_wyrazenie_zesp_html_a2279dab032ecaeaabdeff36a1d8ee1b2"><div class="ttname"><a href="struct_wyrazenie_zesp.html#a2279dab032ecaeaabdeff36a1d8ee1b2">WyrazenieZesp::Wyswietl</a></div><div class="ttdeci">void Wyswietl() const</div><div class="ttdoc">Funkcja wyswietla Wyrazenie Zespolone.</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.cpp:40</div></div>
+<div class="ttc" id="astruct_wyrazenie_zesp_html"><div class="ttname"><a href="struct_wyrazenie_zesp.html">WyrazenieZesp</a></div><div class="ttdoc">Modeluje pojecie dwuargumentowego wyrazenia zespolonego.</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.hh:20</div></div>
+<div class="ttc" id="astruct_wyrazenie_zesp_html_a1fe508230913565d061e5d107b59cd01"><div class="ttname"><a href="struct_wyrazenie_zesp.html#a1fe508230913565d061e5d107b59cd01">WyrazenieZesp::Oblicz</a></div><div class="ttdeci">LZespolona Oblicz() const</div><div class="ttdoc">Funkcja Oblicza wartosc Wyrazenia Zespolonego.</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.cpp:11</div></div>
+<div class="ttc" id="a_wyrazenie_zesp_8hh_html"><div class="ttname"><a href="_wyrazenie_zesp_8hh.html">WyrazenieZesp.hh</a></div></div>
+<div class="ttc" id="astructstat_html_abcac9d74d2a31fe99b83b25349ab7634"><div class="ttname"><a href="structstat.html#abcac9d74d2a31fe99b83b25349ab7634">stat::dodaj_poprawna</a></div><div class="ttdeci">void dodaj_poprawna()</div><div class="ttdoc">Funkcja inkrementuje licznki poprawnych odpowiedzi.</div><div class="ttdef"><b>Definition:</b> Statystyki.cpp:9</div></div>
+<div class="ttc" id="astructstat_html_aae37e34dd2c99e0c3f89084a487d2383"><div class="ttname"><a href="structstat.html#aae37e34dd2c99e0c3f89084a487d2383">stat::l_poprawna</a></div><div class="ttdeci">int l_poprawna</div><div class="ttdef"><b>Definition:</b> Statystyki.hh:14</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

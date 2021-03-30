@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Liczby Zespolone: Plik źródłowy LZespolona.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Liczby Zespolone
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Test z Arytmetyki liczb Zespolonych</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">LZespolona.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_l_zespolona_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LZESPOLONA_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LZESPOLONA_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="struct_l_zespolona.html">   10</a></span>&#160;<span class="keyword">struct  </span><a class="code" href="struct_l_zespolona.html">LZespolona</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="struct_l_zespolona.html#a98587ffd2cc06a073f8bfdba116ea8d4">   11</a></span>&#160;  <span class="keywordtype">double</span>   <a class="code" href="struct_l_zespolona.html#a98587ffd2cc06a073f8bfdba116ea8d4">re</a>;    </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="struct_l_zespolona.html#abcaf274a7a8279740e7752cd783439df">   12</a></span>&#160;  <span class="keywordtype">double</span>  <a class="code" href="struct_l_zespolona.html#abcaf274a7a8279740e7752cd783439df">im</a>;    </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="struct_l_zespolona.html">LZespolona</a>  <a class="code" href="struct_l_zespolona.html#a3accd88229f1643c0fff495d4b874d6d">operator + </a>(<span class="keyword">const</span> <a class="code" href="struct_l_zespolona.html">LZespolona</a>  Skl2) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="struct_l_zespolona.html">LZespolona</a> <a class="code" href="struct_l_zespolona.html#a12d038d3cc4f1f15ae610ab7ae4e4cc3">operator / </a>(<span class="keyword">const</span> <span class="keywordtype">double</span> Skl2) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="struct_l_zespolona.html">LZespolona</a>  <a class="code" href="struct_l_zespolona.html#a2c95158baed7539ac568d8486e7152c0">operator - </a>(<span class="keyword">const</span> <a class="code" href="struct_l_zespolona.html">LZespolona</a>  Skl2) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="struct_l_zespolona.html">LZespolona</a>  <a class="code" href="struct_l_zespolona.html#a9debd4935f08f9a462ae8112f6dff0c6">operator * </a>(<span class="keyword">const</span> <a class="code" href="struct_l_zespolona.html">LZespolona</a>  Skl2) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="struct_l_zespolona.html">LZespolona</a>  <a class="code" href="struct_l_zespolona.html#a12d038d3cc4f1f15ae610ab7ae4e4cc3">operator / </a>(<span class="keyword">const</span> <a class="code" href="struct_l_zespolona.html">LZespolona</a>  Skl2) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <a class="code" href="struct_l_zespolona.html">LZespolona</a> <a class="code" href="struct_l_zespolona.html#ad4d65b186a1b4aecd546ed480c873ace">Sprzezenie</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordtype">double</span> <a class="code" href="struct_l_zespolona.html#ab12b33ffb6b4f054ef503c975e7bf17a">Modul2</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="struct_l_zespolona.html#a81c9caa2121f2793e6e9c7241bf6283b">Wyswietl</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">bool</span>  <a class="code" href="struct_l_zespolona.html#ae25312428c6a5461f89c12853646c6db">operator == </a>(<span class="keyword">const</span> <a class="code" href="struct_l_zespolona.html">LZespolona</a>  Skl2) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="struct_l_zespolona.html#aafc0ec3995526da3761f94a81a765cd9">wczytaj_l</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  std::istream&amp; <a class="code" href="_l_zespolona_8hh.html#a56ef2536b422e0bc6a9fb7c13f80ca39">operator&gt;&gt;</a>(std::istream&amp; in,<a class="code" href="struct_l_zespolona.html">LZespolona</a> &amp;wynik);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  std::ostream&amp; <a class="code" href="_l_zespolona_8hh.html#af1c23850013a14aff243df4e2d0f9ace">operator&lt;&lt;</a>(std::ostream &amp;out,<span class="keyword">const</span> <a class="code" href="struct_l_zespolona.html">LZespolona</a> &amp;Skl);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_l_zespolona_html_a98587ffd2cc06a073f8bfdba116ea8d4"><div class="ttname"><a href="struct_l_zespolona.html#a98587ffd2cc06a073f8bfdba116ea8d4">LZespolona::re</a></div><div class="ttdeci">double re</div><div class="ttdef"><b>Definition:</b> LZespolona.hh:11</div></div>
+<div class="ttc" id="astruct_l_zespolona_html_ad4d65b186a1b4aecd546ed480c873ace"><div class="ttname"><a href="struct_l_zespolona.html#ad4d65b186a1b4aecd546ed480c873ace">LZespolona::Sprzezenie</a></div><div class="ttdeci">LZespolona Sprzezenie() const</div><div class="ttdoc">Funkcja obliczyjace Sprzezenie LZespolonej.</div><div class="ttdef"><b>Definition:</b> LZespolona.cpp:99</div></div>
+<div class="ttc" id="a_l_zespolona_8cpp_html_aa16e81c60c5337b4e26d40cd82ace8c0"><div class="ttname"><a href="_l_zespolona_8cpp.html#aa16e81c60c5337b4e26d40cd82ace8c0">operator&gt;&gt;</a></div><div class="ttdeci">istream &amp; operator&gt;&gt;(istream &amp;in, LZespolona &amp;wynik)</div><div class="ttdoc">Funkcja przeciażenie operatora bitowego w prawo dla LZespolonej.</div><div class="ttdef"><b>Definition:</b> LZespolona.cpp:157</div></div>
+<div class="ttc" id="astruct_l_zespolona_html"><div class="ttname"><a href="struct_l_zespolona.html">LZespolona</a></div><div class="ttdoc">Modeluje pojecie liczby zespolonej ktora zawiera czesc rzeczywista i zespolona typu double.</div><div class="ttdef"><b>Definition:</b> LZespolona.hh:10</div></div>
+<div class="ttc" id="a_l_zespolona_8hh_html_a56ef2536b422e0bc6a9fb7c13f80ca39"><div class="ttname"><a href="_l_zespolona_8hh.html#a56ef2536b422e0bc6a9fb7c13f80ca39">operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;in, LZespolona &amp;wynik)</div></div>
+<div class="ttc" id="astruct_l_zespolona_html_a12d038d3cc4f1f15ae610ab7ae4e4cc3"><div class="ttname"><a href="struct_l_zespolona.html#a12d038d3cc4f1f15ae610ab7ae4e4cc3">LZespolona::operator/</a></div><div class="ttdeci">LZespolona operator/(const double Skl2) const</div><div class="ttdoc">Funkcja realizuje dzielenie liczby zespolonej przez skakar.</div><div class="ttdef"><b>Definition:</b> LZespolona.cpp:86</div></div>
+<div class="ttc" id="astruct_l_zespolona_html_aafc0ec3995526da3761f94a81a765cd9"><div class="ttname"><a href="struct_l_zespolona.html#aafc0ec3995526da3761f94a81a765cd9">LZespolona::wczytaj_l</a></div><div class="ttdeci">bool wczytaj_l()</div><div class="ttdoc">Funkcja wczytywania liczby Zespolonej.</div><div class="ttdef"><b>Definition:</b> LZespolona.cpp:134</div></div>
+<div class="ttc" id="a_l_zespolona_8hh_html"><div class="ttname"><a href="_l_zespolona_8hh.html">LZespolona.hh</a></div></div>
+<div class="ttc" id="astruct_l_zespolona_html_a81c9caa2121f2793e6e9c7241bf6283b"><div class="ttname"><a href="struct_l_zespolona.html#a81c9caa2121f2793e6e9c7241bf6283b">LZespolona::Wyswietl</a></div><div class="ttdeci">void Wyswietl() const</div><div class="ttdoc">Funkcja wyswietlajaca obiekt LZespolona.</div><div class="ttdef"><b>Definition:</b> LZespolona.cpp:119</div></div>
+<div class="ttc" id="astruct_l_zespolona_html_a3accd88229f1643c0fff495d4b874d6d"><div class="ttname"><a href="struct_l_zespolona.html#a3accd88229f1643c0fff495d4b874d6d">LZespolona::operator+</a></div><div class="ttdeci">LZespolona operator+(const LZespolona Skl2) const</div><div class="ttdoc">Realizuje dodanie dwoch liczb zespolonych.</div><div class="ttdef"><b>Definition:</b> LZespolona.cpp:36</div></div>
+<div class="ttc" id="a_l_zespolona_8cpp_html_a5fe46f1cba27f30988a9b549f4ca69f8"><div class="ttname"><a href="_l_zespolona_8cpp.html#a5fe46f1cba27f30988a9b549f4ca69f8">MIN_DIFF</a></div><div class="ttdeci">#define MIN_DIFF</div><div class="ttdef"><b>Definition:</b> LZespolona.cpp:6</div></div>
+<div class="ttc" id="astruct_l_zespolona_html_a2c95158baed7539ac568d8486e7152c0"><div class="ttname"><a href="struct_l_zespolona.html#a2c95158baed7539ac568d8486e7152c0">LZespolona::operator-</a></div><div class="ttdeci">LZespolona operator-(const LZespolona Skl2) const</div><div class="ttdoc">Funkcja przeciazenia operatora odejmowania.</div><div class="ttdef"><b>Definition:</b> LZespolona.cpp:48</div></div>
+<div class="ttc" id="astruct_l_zespolona_html_ab12b33ffb6b4f054ef503c975e7bf17a"><div class="ttname"><a href="struct_l_zespolona.html#ab12b33ffb6b4f054ef503c975e7bf17a">LZespolona::Modul2</a></div><div class="ttdeci">double Modul2() const</div><div class="ttdoc">Funkcja obliczajaca modul LZespolonej.</div><div class="ttdef"><b>Definition:</b> LZespolona.cpp:110</div></div>
+<div class="ttc" id="astruct_l_zespolona_html_a9debd4935f08f9a462ae8112f6dff0c6"><div class="ttname"><a href="struct_l_zespolona.html#a9debd4935f08f9a462ae8112f6dff0c6">LZespolona::operator*</a></div><div class="ttdeci">LZespolona operator*(const LZespolona Skl2) const</div><div class="ttdoc">Funkcja przeciazenia Operatora mnozenia.</div><div class="ttdef"><b>Definition:</b> LZespolona.cpp:61</div></div>
+<div class="ttc" id="astruct_l_zespolona_html_ae25312428c6a5461f89c12853646c6db"><div class="ttname"><a href="struct_l_zespolona.html#ae25312428c6a5461f89c12853646c6db">LZespolona::operator==</a></div><div class="ttdeci">bool operator==(const LZespolona Skl2) const</div><div class="ttdoc">Realizuje porównanie dwoch liczb zespolonych.</div><div class="ttdef"><b>Definition:</b> LZespolona.cpp:18</div></div>
+<div class="ttc" id="astruct_l_zespolona_html_abcaf274a7a8279740e7752cd783439df"><div class="ttname"><a href="struct_l_zespolona.html#abcaf274a7a8279740e7752cd783439df">LZespolona::im</a></div><div class="ttdeci">double im</div><div class="ttdef"><b>Definition:</b> LZespolona.hh:12</div></div>
+<div class="ttc" id="a_l_zespolona_8hh_html_af1c23850013a14aff243df4e2d0f9ace"><div class="ttname"><a href="_l_zespolona_8hh.html#af1c23850013a14aff243df4e2d0f9ace">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const LZespolona &amp;Skl)</div></div>
+<div class="ttc" id="a_l_zespolona_8cpp_html_a49455d5115be662cc16f01af1bcd2acd"><div class="ttname"><a href="_l_zespolona_8cpp.html#a49455d5115be662cc16f01af1bcd2acd">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;out, const LZespolona &amp;Skl)</div><div class="ttdoc">Funkcja przeciażenie operatora bitowego w lewo dla LZespolonej.</div><div class="ttdef"><b>Definition:</b> LZespolona.cpp:203</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

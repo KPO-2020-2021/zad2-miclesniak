@@ -2,6 +2,32 @@
 #include "./doctest/doctest.h"
 #include "LZespolona.hh"
 
+TEST_CASE("test LZespolona Porównanie")
+{
+    LZespolona x,y;
+
+    x.re = 3;
+    x.im = 7;
+
+    y.re = 3;
+    y.im = 7;
+
+    CHECK(x == y);
+}
+
+TEST_CASE("test LZespolona Porównanie 2")
+{
+    LZespolona x,y;
+
+    x.re = 3;
+    x.im = 7;
+
+    y.re = 7;
+    y.im = 3;
+
+    CHECK_FALSE(x == y);
+}
+
 TEST_CASE("test LZespolona Suma"){
     LZespolona x, y, z;
 
@@ -32,3 +58,4 @@ TEST_CASE("test LZespolona Suma")
 
     CHECK(x+y == z);
 }
+

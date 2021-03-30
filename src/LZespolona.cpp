@@ -7,16 +7,15 @@
 
 using namespace std;
 
-/*!
- * Realizuje porównanie dwoch liczb zespolonych.
- * Argumenty:
- *    Skl1 - pierwsza porównywana liczba zespolona,
- *    Skl2 - druga porównywana liczba zespolona.
- * Zwraca:
- *    True dla równych liczb zespolonych.
+/**
+ * @brief Realizuje porównanie dwoch liczb zespolonych.
+ * 
+ *   @param Skl2 - druga porównywana liczba zespolona.
+ * 
+ *    @return bool True dla równych liczb zespolonych.
  */
 
-bool  LZespolona::operator == (LZespolona  Skl2) const{
+bool  LZespolona::operator == (const LZespolona Skl2) const{
   if ((this->re == Skl2.re) && (this->im == Skl2.im))
     return true;
   //alternatywnie, dla MIN_DIFF i wyników od użytkownika
@@ -27,59 +26,64 @@ bool  LZespolona::operator == (LZespolona  Skl2) const{
   
 }
 
-/*!
- * Realizuje dodanie dwoch liczb zespolonych.
- * Argumenty:
- *    Skl1 - pierwszy skladnik dodawania,
- *    Skl2 - drugi skladnik dodawania.
- * Zwraca:
- *    Sume dwoch skladnikow przekazanych jako parametry.
+/**
+ * @brief Realizuje dodanie dwoch liczb zespolonych.
+ * 
+ *    @param Skl2 - drugi skladnik dodawania.
+ * 
+ *    @return wynik Zwracamy sume dwoch LZespolonych
  */
-LZespolona  LZespolona::operator + (LZespolona  Skl2) const{
-
-  Skl2.re += this->re;
-  Skl2.im += this->im;
-  return Skl2;
+LZespolona  LZespolona::operator + (const LZespolona  Skl2) const{
+  LZespolona wynik;
+  wynik.re = this->re + Skl2.re;
+  wynik.im = this->im + Skl2.im;
+  return wynik;
 }
-
-LZespolona LZespolona::operator-(LZespolona Skl2) const
+/**
+ * @brief Funkcja przeciazenia operatora odejmowania
+ * 
+ * @param Skl2 Odjemna typu LZespolona
+ * @return LZespolona Zwracamy wynik odejmowania 2 LZespolonych
+ */
+LZespolona LZespolona::operator-(const LZespolona Skl2) const
 {
-  Skl2.re = this->re - Skl2.re;
-  Skl2.im = this->im - Skl2.im;
-  return Skl2;
+  LZespolona wynik;
+  wynik.re = this->re - Skl2.re;
+  wynik.im = this->im - Skl2.im;
+  return wynik;
 }
-
-LZespolona LZespolona::operator*(LZespolona Skl2) const
+/**
+ * @brief Funkcja przeciazenia Operatora mnozenia
+ * 
+ * @param Skl2 Mnoznik typu LZespolona
+ * @return LZespolona Zwracamy wynik mnozenia 2 LZespolonych
+ */
+LZespolona LZespolona::operator*(const LZespolona Skl2) const
 {
   LZespolona wynik;
   wynik.re = (this->re * Skl2.re) - (this->im * Skl2.im);
   wynik.im = (this->re * Skl2.im) + (this->im * Skl2.re);
   return wynik;
 }
-
-LZespolona LZespolona::operator/(LZespolona Skl2) const
+/**
+ * @brief Funkcja przeciazenia Operatora dzielenia 
+ * 
+ * @param Skl2 Dzielnik typu LZespolona
+ * @return LZespolona Zwracamy wynik dzielenia 2 LZespolonych
+ */
+LZespolona LZespolona::operator/(const LZespolona Skl2) const
 {
-  try
-  {
-    Skl2 = (*this * Skl2.Sprzezenie()) / Skl2.Modul2();
-  }
-  catch(runtime_error & e)
-  {
-    cout<<"Wystapil wyjatek"<<endl<< e.what();
-  }
-  return Skl2;
+  return (*this * Skl2.Sprzezenie()) / Skl2.Modul2();
 }
 
 
 /*!
- * Realizuje dzielenie liczby zespolonej przez skakar.
- * Argumenty:
- *    Skl1 - dzielona liczba zespolona,
- *    Skl2 - skalar-dzielnik.
- * Zwraca:
- *    Wynik dzielenia dwoch skladnikow przekazanych jako parametry.
+ * @brief Funkcja realizuje dzielenie liczby zespolonej przez skakar.
+ *    @param Skl2 - skalar-dzielnik.
+ * 
+ *    @return Wynik Wynik dzielenia obiektu LZespolonej przez skalar
  */
-LZespolona  LZespolona::operator / (double  Skl2) const{
+LZespolona  LZespolona::operator / (const double  Skl2) const{
   LZespolona  Wynik;
   if (Skl2 ==0 )
     throw runtime_error("Błąd matematyczny: próbowano podzielić przez zero\n");
@@ -87,17 +91,30 @@ LZespolona  LZespolona::operator / (double  Skl2) const{
   Wynik.im = this->im / Skl2;
   return Wynik;
 }
+/**
+ * @brief Funkcja obliczyjace Sprzezenie LZespolonej
+ * 
+ * @return LZespolona Zwraca Sprzezona liczbe Zespolona
+ */
 LZespolona LZespolona::Sprzezenie() const{
   LZespolona temp;
   temp.re = this->re;
   temp.im = - this->im;
   return temp;
 }
-
+/**
+ * @brief Funkcja obliczajaca modul LZespolonej
+ * 
+ * @return double Zwracamy Modul z LZespolonej
+ */
 double LZespolona::Modul2() const
 {
   return this->re * this->re + this->im * this->im;
 }
+/**
+ * @brief Funkcja wyswietlajaca obiekt LZespolona 
+ * 
+ */
 
 void LZespolona::Wyswietl() const{
   cout<<"("<<this->re;
@@ -106,35 +123,37 @@ void LZespolona::Wyswietl() const{
   cout<<this->im<<"i)";
 }
 
-LZespolona LZespolona::wczytaj_l(){
-  char temp;
-  cin>>temp;
-  if(temp != '('){
-    cout<<"blad";
-    return *this;
-  }
-  cin>>re;
-  if(cin.fail()){
-    return *this;
-  }
-  cin>>im;
-  if(cin.fail()){
-    return *this;
-  }
-  cin>>temp;
-  if(temp != 'i'){
-    cout<<"blad";
-    return *this;
-  }
-  cin>>temp;
-  if(temp != ')'){
-    cout<<"blad";
-    return *this;
-  }
+/**
+ * @brief Funkcja wczytywania liczby Zespolonej
+ * 
+ * @return bool - status wczytywania
+ * @retval true - wczytywanie zakonczone powodzeniem,liczba gotowa do uzycia
+ * @retval false  - przekroczono ilosc bledow zapisu
+ */
 
-  return *this;
+bool LZespolona::wczytaj_l() {
+  size_t ilosc_bledow = 0;
+  while(ilosc_bledow < 3){
+  cin>>*this;
+  if(cin.fail()){   //Jeśli  bład wczytywania
+    cin.clear();    //resetujemy failbit 
+    cin.ignore(99999,'\n'); //czyscimy bufor wejsciowy
+    cout<<"Błędny format odpowiedzi!\n";
+    ilosc_bledow++;
+  }
+  else {
+    return true;     //w przeciwnym razie zwracamy true - wczytywanie zakonczone poprawnie
+  }  
+  }
+  return false;
 }
-
+/**
+ * @brief Funkcja przeciażenie operatora bitowego w prawo dla LZespolonej 
+ * 
+ * @param in Strumień wejsciowy przez który wczytujemy wartosci
+ * @param wynik Obiekt do ktorego przypisujemy wczytane wartosci
+ * @return istream& Strumien wejsciowy z którego odczytano wartości 
+ */
 istream& operator>>(istream& in,LZespolona &wynik){
   char temp;
   in>>temp;
@@ -173,7 +192,15 @@ istream& operator>>(istream& in,LZespolona &wynik){
   return in;
 }
 
-ostream& operator<<(ostream &out,LZespolona &Skl){
+/**
+ * @brief Funkcja przeciażenie operatora bitowego w lewo dla LZespolonej 
+ * 
+ * @param out Strumień na którym mają być wyświetlane wartości
+ * @param Skl Obiekt który wyświetlamy
+ * @return ostream& Strumien wyjsciowy z zapisana liczba zespolona
+ */
+
+ostream& operator<<(ostream &out,const LZespolona &Skl){
    out<<"("<<Skl.re;
   if(Skl.im>=0)
     out<<"+";

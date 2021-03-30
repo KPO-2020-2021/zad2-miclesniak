@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Liczby Zespolone: Plik źródłowy WyrazenieZesp.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Liczby Zespolone
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Test z Arytmetyki liczb Zespolonych</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">WyrazenieZesp.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_wyrazenie_zesp_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WYRAZENIEZESP_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WYRAZENIEZESP_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_l_zespolona_8hh.html">LZespolona.hh</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="_wyrazenie_zesp_8hh.html#a7215803e478cdd4bdf4f1b8087cae87b">    9</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="_wyrazenie_zesp_8hh.html#a7215803e478cdd4bdf4f1b8087cae87b">Operator</a> { <a class="code" href="_wyrazenie_zesp_8hh.html#a7215803e478cdd4bdf4f1b8087cae87baec2a205b68cb58164f2425cd2ae0df07">Op_Dodaj</a>,   </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="_wyrazenie_zesp_8hh.html#a7215803e478cdd4bdf4f1b8087cae87bad59b7b543914e798bf9d29b324eeadb5">   10</a></span>&#160;                <a class="code" href="_wyrazenie_zesp_8hh.html#a7215803e478cdd4bdf4f1b8087cae87bad59b7b543914e798bf9d29b324eeadb5">Op_Odejmij</a>, </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="_wyrazenie_zesp_8hh.html#a7215803e478cdd4bdf4f1b8087cae87bac2888db79607ababd47f0693ddd416e4">   11</a></span>&#160;                <a class="code" href="_wyrazenie_zesp_8hh.html#a7215803e478cdd4bdf4f1b8087cae87bac2888db79607ababd47f0693ddd416e4">Op_Mnoz</a>,    </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="_wyrazenie_zesp_8hh.html#a7215803e478cdd4bdf4f1b8087cae87ba7e488c1d208140dd5d16dcc228ccec6d">   12</a></span>&#160;                <a class="code" href="_wyrazenie_zesp_8hh.html#a7215803e478cdd4bdf4f1b8087cae87ba7e488c1d208140dd5d16dcc228ccec6d">Op_Dziel</a>    </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;              };</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct_wyrazenie_zesp.html">   20</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_wyrazenie_zesp.html">WyrazenieZesp</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_wyrazenie_zesp.html#a71e1c590cda7f9205262387be3bb0510">   21</a></span>&#160;  <a class="code" href="struct_l_zespolona.html">LZespolona</a>   <a class="code" href="struct_wyrazenie_zesp.html#a71e1c590cda7f9205262387be3bb0510">Arg1</a>;   <span class="comment">// Pierwszy argument wyrazenia arytmetycznego</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="struct_wyrazenie_zesp.html#a26666b026643ee77338df398d7740144">   22</a></span>&#160;  <a class="code" href="_wyrazenie_zesp_8hh.html#a7215803e478cdd4bdf4f1b8087cae87b">Operator</a>     <a class="code" href="struct_wyrazenie_zesp.html#a26666b026643ee77338df398d7740144">Op</a>;     <span class="comment">// Opertor wyrazenia arytmetycznego</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_wyrazenie_zesp.html#a81452901f19375a7cd0101db0a4e41dd">   23</a></span>&#160;  <a class="code" href="struct_l_zespolona.html">LZespolona</a>   <a class="code" href="struct_wyrazenie_zesp.html#a81452901f19375a7cd0101db0a4e41dd">Arg2</a>;   <span class="comment">// Drugi argument wyrazenia arytmetycznego</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="struct_wyrazenie_zesp.html#a2279dab032ecaeaabdeff36a1d8ee1b2">Wyswietl</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="struct_l_zespolona.html">LZespolona</a> <a class="code" href="struct_wyrazenie_zesp.html#a1fe508230913565d061e5d107b59cd01">Oblicz</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="struct_wyrazenie_zesp.html">WyrazenieZesp</a> <a class="code" href="struct_wyrazenie_zesp.html#ab6c96f44e5e63d57eb6fa5c347ae30e5">wczytaj_Wz</a>() ;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  std::istream&amp; <a class="code" href="_wyrazenie_zesp_8hh.html#a65451c0dc3ef1439d6bf3f56d721619b">operator&gt;&gt;</a>(std::istream&amp; in, <a class="code" href="struct_wyrazenie_zesp.html">WyrazenieZesp</a> &amp;temp);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  std::ostream&amp; <a class="code" href="_wyrazenie_zesp_8hh.html#a4ffd47672373a2100f6707ac0a849c37">operator&lt;&lt;</a>(std::ostream &amp;out, <span class="keyword">const</span> <a class="code" href="struct_wyrazenie_zesp.html">WyrazenieZesp</a> &amp;temp);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_l_zespolona_html_a98587ffd2cc06a073f8bfdba116ea8d4"><div class="ttname"><a href="struct_l_zespolona.html#a98587ffd2cc06a073f8bfdba116ea8d4">LZespolona::re</a></div><div class="ttdeci">double re</div><div class="ttdef"><b>Definition:</b> LZespolona.hh:11</div></div>
+<div class="ttc" id="a_wyrazenie_zesp_8hh_html_a7215803e478cdd4bdf4f1b8087cae87b"><div class="ttname"><a href="_wyrazenie_zesp_8hh.html#a7215803e478cdd4bdf4f1b8087cae87b">Operator</a></div><div class="ttdeci">Operator</div><div class="ttdoc">Modeluje zbior operatorow arytmetycznych.</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.hh:9</div></div>
+<div class="ttc" id="astruct_l_zespolona_html"><div class="ttname"><a href="struct_l_zespolona.html">LZespolona</a></div><div class="ttdoc">Modeluje pojecie liczby zespolonej ktora zawiera czesc rzeczywista i zespolona typu double.</div><div class="ttdef"><b>Definition:</b> LZespolona.hh:10</div></div>
+<div class="ttc" id="a_wyrazenie_zesp_8hh_html_a7215803e478cdd4bdf4f1b8087cae87bac2888db79607ababd47f0693ddd416e4"><div class="ttname"><a href="_wyrazenie_zesp_8hh.html#a7215803e478cdd4bdf4f1b8087cae87bac2888db79607ababd47f0693ddd416e4">Op_Mnoz</a></div><div class="ttdeci">@ Op_Mnoz</div><div class="ttdoc">Operacja mnozenia.</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.hh:11</div></div>
+<div class="ttc" id="a_l_zespolona_8hh_html"><div class="ttname"><a href="_l_zespolona_8hh.html">LZespolona.hh</a></div></div>
+<div class="ttc" id="astruct_wyrazenie_zesp_html_a81452901f19375a7cd0101db0a4e41dd"><div class="ttname"><a href="struct_wyrazenie_zesp.html#a81452901f19375a7cd0101db0a4e41dd">WyrazenieZesp::Arg2</a></div><div class="ttdeci">LZespolona Arg2</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.hh:23</div></div>
+<div class="ttc" id="a_wyrazenie_zesp_8hh_html_a7215803e478cdd4bdf4f1b8087cae87bad59b7b543914e798bf9d29b324eeadb5"><div class="ttname"><a href="_wyrazenie_zesp_8hh.html#a7215803e478cdd4bdf4f1b8087cae87bad59b7b543914e798bf9d29b324eeadb5">Op_Odejmij</a></div><div class="ttdeci">@ Op_Odejmij</div><div class="ttdoc">Operacja odejmowania.</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.hh:10</div></div>
+<div class="ttc" id="atest1_8cpp_html_a93d937095fa700110010b6d642636857"><div class="ttname"><a href="test1_8cpp.html#a93d937095fa700110010b6d642636857">TEST_CASE</a></div><div class="ttdeci">TEST_CASE(&quot;test LZespolona Porównanie&quot;)</div><div class="ttdef"><b>Definition:</b> test1.cpp:5</div></div>
+<div class="ttc" id="a_wyrazenie_zesp_8cpp_html_a80fd78630b0db4b7d09250a98f991c49"><div class="ttname"><a href="_wyrazenie_zesp_8cpp.html#a80fd78630b0db4b7d09250a98f991c49">operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(istream &amp;in, WyrazenieZesp &amp;temp)</div><div class="ttdoc">Funkcja przeciazenia operatora bitowego w prawo dla Wyrazen Zespolonych.</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.cpp:105</div></div>
+<div class="ttc" id="astruct_wyrazenie_zesp_html_a2279dab032ecaeaabdeff36a1d8ee1b2"><div class="ttname"><a href="struct_wyrazenie_zesp.html#a2279dab032ecaeaabdeff36a1d8ee1b2">WyrazenieZesp::Wyswietl</a></div><div class="ttdeci">void Wyswietl() const</div><div class="ttdoc">Funkcja wyswietla Wyrazenie Zespolone.</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.cpp:40</div></div>
+<div class="ttc" id="astruct_wyrazenie_zesp_html"><div class="ttname"><a href="struct_wyrazenie_zesp.html">WyrazenieZesp</a></div><div class="ttdoc">Modeluje pojecie dwuargumentowego wyrazenia zespolonego.</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.hh:20</div></div>
+<div class="ttc" id="a_wyrazenie_zesp_8hh_html_a7215803e478cdd4bdf4f1b8087cae87baec2a205b68cb58164f2425cd2ae0df07"><div class="ttname"><a href="_wyrazenie_zesp_8hh.html#a7215803e478cdd4bdf4f1b8087cae87baec2a205b68cb58164f2425cd2ae0df07">Op_Dodaj</a></div><div class="ttdeci">@ Op_Dodaj</div><div class="ttdoc">Operacja dodawania.</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.hh:9</div></div>
+<div class="ttc" id="a_wyrazenie_zesp_8hh_html_a65451c0dc3ef1439d6bf3f56d721619b"><div class="ttname"><a href="_wyrazenie_zesp_8hh.html#a65451c0dc3ef1439d6bf3f56d721619b">operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;in, WyrazenieZesp &amp;temp)</div></div>
+<div class="ttc" id="astruct_wyrazenie_zesp_html_a1fe508230913565d061e5d107b59cd01"><div class="ttname"><a href="struct_wyrazenie_zesp.html#a1fe508230913565d061e5d107b59cd01">WyrazenieZesp::Oblicz</a></div><div class="ttdeci">LZespolona Oblicz() const</div><div class="ttdoc">Funkcja Oblicza wartosc Wyrazenia Zespolonego.</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.cpp:11</div></div>
+<div class="ttc" id="a_wyrazenie_zesp_8hh_html"><div class="ttname"><a href="_wyrazenie_zesp_8hh.html">WyrazenieZesp.hh</a></div></div>
+<div class="ttc" id="atest4_8cpp_html_a913870f2c1b5f58f75e75a04b1ac81bb"><div class="ttname"><a href="test4_8cpp.html#a913870f2c1b5f58f75e75a04b1ac81bb">TEST_CASE</a></div><div class="ttdeci">TEST_CASE(&quot;Test LZespolona iloczynu&quot;)</div><div class="ttdef"><b>Definition:</b> test4.cpp:5</div></div>
+<div class="ttc" id="a_wyrazenie_zesp_8hh_html_a4ffd47672373a2100f6707ac0a849c37"><div class="ttname"><a href="_wyrazenie_zesp_8hh.html#a4ffd47672373a2100f6707ac0a849c37">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const WyrazenieZesp &amp;temp)</div></div>
+<div class="ttc" id="atest3_8cpp_html_ad53dfbd2c8cf207a896efe09eadf75a3"><div class="ttname"><a href="test3_8cpp.html#ad53dfbd2c8cf207a896efe09eadf75a3">TEST_CASE</a></div><div class="ttdeci">TEST_CASE(&quot;Test LZespolona odejmowanie&quot;)</div><div class="ttdef"><b>Definition:</b> test3.cpp:5</div></div>
+<div class="ttc" id="atest2_8cpp_html_adadce7ea9010e2f1d6ffae89d41ff886"><div class="ttname"><a href="test2_8cpp.html#adadce7ea9010e2f1d6ffae89d41ff886">TEST_CASE</a></div><div class="ttdeci">TEST_CASE(&quot;Test LZespolona dzielenie przez skalar 1&quot;)</div><div class="ttdef"><b>Definition:</b> test2.cpp:5</div></div>
+<div class="ttc" id="a_wyrazenie_zesp_8cpp_html_ad62a3cecd112a033efe67d967d78bd3f"><div class="ttname"><a href="_wyrazenie_zesp_8cpp.html#ad62a3cecd112a033efe67d967d78bd3f">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(ostream &amp;out, const WyrazenieZesp &amp;temp)</div><div class="ttdoc">Funkcja przeciazenia bitowego w lewo.</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.cpp:145</div></div>
+<div class="ttc" id="astruct_wyrazenie_zesp_html_a71e1c590cda7f9205262387be3bb0510"><div class="ttname"><a href="struct_wyrazenie_zesp.html#a71e1c590cda7f9205262387be3bb0510">WyrazenieZesp::Arg1</a></div><div class="ttdeci">LZespolona Arg1</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.hh:21</div></div>
+<div class="ttc" id="atest5_8cpp_html_a681e155063eaf1a068775c859a6d9c3d"><div class="ttname"><a href="test5_8cpp.html#a681e155063eaf1a068775c859a6d9c3d">TEST_CASE</a></div><div class="ttdeci">TEST_CASE(&quot;Test LZespolona ilorazu&quot;)</div><div class="ttdef"><b>Definition:</b> test5.cpp:5</div></div>
+<div class="ttc" id="a_wyrazenie_zesp_8hh_html_a7215803e478cdd4bdf4f1b8087cae87ba7e488c1d208140dd5d16dcc228ccec6d"><div class="ttname"><a href="_wyrazenie_zesp_8hh.html#a7215803e478cdd4bdf4f1b8087cae87ba7e488c1d208140dd5d16dcc228ccec6d">Op_Dziel</a></div><div class="ttdeci">@ Op_Dziel</div><div class="ttdoc">Operacja dzielenia.</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.hh:12</div></div>
+<div class="ttc" id="astruct_wyrazenie_zesp_html_ab6c96f44e5e63d57eb6fa5c347ae30e5"><div class="ttname"><a href="struct_wyrazenie_zesp.html#ab6c96f44e5e63d57eb6fa5c347ae30e5">WyrazenieZesp::wczytaj_Wz</a></div><div class="ttdeci">WyrazenieZesp wczytaj_Wz()</div><div class="ttdoc">Funkcja wczytuje Wyrazenie Zespolone.</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.cpp:70</div></div>
+<div class="ttc" id="astruct_l_zespolona_html_abcaf274a7a8279740e7752cd783439df"><div class="ttname"><a href="struct_l_zespolona.html#abcaf274a7a8279740e7752cd783439df">LZespolona::im</a></div><div class="ttdeci">double im</div><div class="ttdef"><b>Definition:</b> LZespolona.hh:12</div></div>
+<div class="ttc" id="astruct_wyrazenie_zesp_html_a26666b026643ee77338df398d7740144"><div class="ttname"><a href="struct_wyrazenie_zesp.html#a26666b026643ee77338df398d7740144">WyrazenieZesp::Op</a></div><div class="ttdeci">Operator Op</div><div class="ttdef"><b>Definition:</b> WyrazenieZesp.hh:22</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

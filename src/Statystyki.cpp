@@ -2,29 +2,33 @@
 #include <iostream>
 
 using namespace std;
-
-void dodaj_poprawna(stat &s){
-s.l_poprawna++;
+/**
+ * @brief Funkcja inkrementuje licznki poprawnych odpowiedzi
+ * 
+ */
+void stat::dodaj_poprawna(){
+l_poprawna++;
+}
+/**
+ * @brief Funkcja inkrementuje licznik niepoprawnych odpowiedzi
+ * 
+ */
+void stat::dodaj_niepoprawna(){
+l_niepoprawna++;
 }
 
-void dodaj_niepoprawna(stat &s){
-s.l_niepoprawna++;
-}
-
-void wyswietl(stat s){
-double procent= ((double)s.l_poprawna/((double)s.l_poprawna+(double)s.l_niepoprawna)) * 100;
-cout<<"Ilosc odpowiedz poprawnych wynosi: "<<s.l_poprawna<<endl;
-cout<<"Ilosc odpowiedzi niepoprawnych: "<<s.l_niepoprawna<<endl;
+/**
+ * @brief Funkcja Wyswietla Liczbe poprawnych i niepoprawnych odpowiedzi, jak i procent poprawnych odpowiedzi
+ * 
+ */
+void stat::wyswietl() const{
+double procent= ((double)l_poprawna/((double)l_poprawna+(double)l_niepoprawna)) * 100;
+cout<<"Ilosc odpowiedz poprawnych wynosi: "<<l_poprawna<<endl;
+cout<<"Ilosc odpowiedzi niepoprawnych: "<<l_niepoprawna<<endl;
 cout<<"Procent poprawnych odpowiedzi wynosi: "<<procent<<'%'<<endl;
 }
 
-void inicjuj(stat &s){
-s.l_poprawna = 0;
-s.l_niepoprawna = 0;
-}
 
 
-/*
- * Tu nalezy zdefiniowac funkcje, ktorych zapowiedzi znajduja sie
- * w pliku naglowkowym.
- */
+
+

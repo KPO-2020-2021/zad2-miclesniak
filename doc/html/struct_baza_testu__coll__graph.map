@@ -1,0 +1,5 @@
+<map id="BazaTestu" name="BazaTestu">
+<area shape="rect" id="node1" title="Modeluje pojecie baze testu z zestawem pytan w tablicy oraz informacji o maksymalnej ilosci pytan,..." alt="" coords="23,199,111,225"/>
+<area shape="rect" id="node2" href="$struct_wyrazenie_zesp.html" title="Modeluje pojecie dwuargumentowego wyrazenia zespolonego." alt="" coords="5,109,128,136"/>
+<area shape="rect" id="node3" href="$struct_l_zespolona.html" title="Modeluje pojecie liczby zespolonej ktora zawiera czesc rzeczywista i zespolona typu double." alt="" coords="18,5,115,32"/>
+</map>
