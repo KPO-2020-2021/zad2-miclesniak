@@ -4,6 +4,21 @@
 using namespace std;
 
 /**
+ * @brief Funkcja przeciazenia operatora porownania dla Wyrazen Zespolonych
+ * 
+ * @param Wyr Wyrazenie z ktorym porownujemy
+ * @return true Jesli Wyrazenia sa identyczne
+ * @return false Jesli Wyrazenia sa rozne
+ */
+bool  WyrazenieZesp::operator== (const WyrazenieZesp  Wyr) const
+{
+    if(this->Arg1 == Wyr.Arg1 && this->Op == Wyr.Op && this->Arg2 == Wyr.Arg2)
+        return true;
+    else 
+        return false;
+}
+
+/**
  * @brief Funkcja Oblicza wartosc Wyrazenia Zespolonego
  * 
  * @return LZespolona Zwracana wartosc dzialania typu LZespolona

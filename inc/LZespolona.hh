@@ -9,7 +9,7 @@
  */
 struct  LZespolona {
   double   re;    
-  double  im;    
+  double  im; 
   LZespolona  operator + (const LZespolona  Skl2) const;
   LZespolona operator +=(const LZespolona &Skl) const;
   LZespolona operator / (const double Skl2) const;

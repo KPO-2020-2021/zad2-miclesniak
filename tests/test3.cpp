@@ -93,3 +93,30 @@ TEST_CASE("Test WyrazenieZesp dzielenie") {
     z = x.Oblicz();
     CHECK(z == y);
 }
+
+TEST_CASE("Test wypisywania WyrZespolone"){
+    std::stringstream os;
+    WyrazenieZesp x;
+    x.Arg1.re = 5;
+    x.Arg1.im = 3.1;
+    x.Op = Op_Odejmij;
+    x.Arg2.re = 6.3;
+    x.Arg2.im = 5;
+
+    os<<x;
+    CHECK_EQ("(5+3.1i)-(6.3+5i)", os.str());
+}
+
+TEST_CASE("Test wczytywanie WyrazeniaZesp"){
+    std::stringstream is;
+    WyrazenieZesp x,y;
+    is<<"(4+3.1i)+(5.2-1.9)";
+    is>>x;
+
+    y.Arg1.re = 4;
+    y.Arg1.im = 3.1;
+    y.Op = Op_Dodaj;
+    y.Arg2.re = 5.2;
+    y.Arg2.im = -1.9;
+    CHECK_EQ(x,y);
+}

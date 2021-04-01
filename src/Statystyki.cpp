@@ -26,7 +26,11 @@ cout<<"Ilosc odpowiedz poprawnych wynosi: "<<l_poprawna<<endl;
 cout<<"Ilosc odpowiedzi niepoprawnych: "<<l_niepoprawna<<endl;
 cout<<"Procent poprawnych odpowiedzi wynosi: "<<this->procent()<<'%'<<endl;
 }
-
+/**
+ * @brief Funkcja obliczajaca procent poprawnych odpowiedzi
+ * 
+ * @return double Zwraca procent
+ */
 double stat::procent() const{
     return ((double)this->l_poprawna/((double)this->l_poprawna+(double)this->l_niepoprawna)) * 100;
 }

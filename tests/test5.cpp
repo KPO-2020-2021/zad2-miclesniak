@@ -31,3 +31,34 @@ TEST_CASE("Test LZespolona ilorazu 2"){
 
     CHECK((x /= y) == z); 
 }
+
+TEST_CASE("Test wypisywania LZespolona"){
+    std::stringstream os;
+    LZespolona x;
+    x.re = 2.3;
+    x.im = 3.7;
+
+    os<<x;
+    CHECK_EQ("(2.3+3.7i)", os.str());
+}
+
+TEST_CASE("Test wypisywania LZespolona 2"){
+    std::stringstream os;
+    LZespolona x;
+    x.re = 7;
+    x.im = -2;
+
+    os<<x;
+    CHECK_EQ("(7-2i)", os.str());
+}
+
+TEST_CASE("Test wczytywanie LZespolona "){
+    std::stringstream is;
+    LZespolona x,y;
+    is<<"(4+3.1i)";
+    is>>x;
+
+    y.re = 4;
+    y.im = 3.1;
+    CHECK_EQ(x,y);
+}

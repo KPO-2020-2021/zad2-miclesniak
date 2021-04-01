@@ -22,6 +22,7 @@ struct WyrazenieZesp {
   Operator     Op;     // Opertor wyrazenia arytmetycznego
   LZespolona   Arg2;   // Drugi argument wyrazenia arytmetycznego
 
+  bool  operator == (const WyrazenieZesp  Wyr) const;
   void Wyswietl() const;
   LZespolona Oblicz() const;
   WyrazenieZesp wczytaj_Wz() ;
