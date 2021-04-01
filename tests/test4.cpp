@@ -24,11 +24,26 @@ TEST_CASE("Test LZespolona iloczyn 2"){
     x.re = 2.5;
     x.im = 6.75;
 
-    y.re = 2.3;
-    y.im = 4.5;
+    y.re = 0.0;
+    y.im = 0.0;
 
-    z.re = -24.625;
-    z.im = 26.775; 
+    z.re = 0.0;
+    z.im = 0.0; 
+
+    CHECK(x*y == z); 
+}
+
+TEST_CASE("Test LZespolona iloczyn 3"){
+    LZespolona x,y,z;
+
+    x.re = 2.5;
+    x.im = 6.75;
+
+    y.re = 1;
+    y.im = 1;
+
+    z.re = -4.25;
+    z.im = 9.25; 
 
     CHECK(x*y == z); 
 }

@@ -28,17 +28,30 @@ TEST_CASE("test LZespolona Porównanie 2")
     CHECK_FALSE(x == y);
 }
 
-TEST_CASE("test LZespolona Porównanie 2")
+TEST_CASE("test LZespolona Porównanie 3")
 {
     LZespolona x,y;
 
-    x.re = 2.999;
+    x.re = 2.99;
     x.im = 7;
 
     y.re = 3;
     y.im = 7;
 
     CHECK_FALSE(x == y);
+}
+
+TEST_CASE("test LZespolona Porównanie 4")
+{
+    LZespolona x,y;
+
+    x.re = 1.0001;
+    x.im = 6.9999;
+
+    y.re = 1;
+    y.im = 7;
+
+    CHECK(x == y);
 }
 
 TEST_CASE("test LZespolona Suma"){
@@ -56,18 +69,18 @@ TEST_CASE("test LZespolona Suma"){
     CHECK(x+y == z);
 }
 
-TEST_CASE("test LZespolona Suma")
+TEST_CASE("test LZespolona Suma 1 ")
 {
     LZespolona x,y,z;
 
     x.re = 3;
     x.im = 7;
 
-    y.re = 7;
-    y.im = 11;
+    y.re = 0.0;
+    y.im = 0.0;
 
-    z.re = 10;
-    z.im = 18;
+    z.re = 3;
+    z.im = 7;
 
     CHECK(x+y == z);
 }
@@ -75,14 +88,14 @@ TEST_CASE("test LZespolona Suma")
 TEST_CASE("test LZespolona suma 2"){
     LZespolona x,y,z;
 
-    x.re = 3;
-    x.im = 1;
+    x.re = 0.0009;
+    x.im = 0.2;
 
-    y.re = 3;
-    y.im = 5;
+    y.re = 0.0001;
+    y.im = 0.54;
 
-    z.re = 6;
-    z.im = 6;
+    z.re = 0.0010;
+    z.im = 0.74;
 
     CHECK((x += y) == z);
 }
