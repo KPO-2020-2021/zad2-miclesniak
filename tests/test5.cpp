@@ -16,3 +16,18 @@ TEST_CASE("Test LZespolona ilorazu"){
 
     CHECK(x/y == z); 
 }
+
+TEST_CASE("Test LZespolona ilorazu 2"){
+    LZespolona x,y,z;
+
+    x.re = 1;
+    x.im = 8;
+
+    y.re = 2;
+    y.im = 3;
+
+    z.re = 2;
+    z.im = 1;
+
+    CHECK((x /= y) == z); 
+}

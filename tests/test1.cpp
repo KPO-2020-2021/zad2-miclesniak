@@ -28,6 +28,19 @@ TEST_CASE("test LZespolona Porównanie 2")
     CHECK_FALSE(x == y);
 }
 
+TEST_CASE("test LZespolona Porównanie 2")
+{
+    LZespolona x,y;
+
+    x.re = 2.999;
+    x.im = 7;
+
+    y.re = 3;
+    y.im = 7;
+
+    CHECK_FALSE(x == y);
+}
+
 TEST_CASE("test LZespolona Suma"){
     LZespolona x, y, z;
 
@@ -59,3 +72,17 @@ TEST_CASE("test LZespolona Suma")
     CHECK(x+y == z);
 }
 
+TEST_CASE("test LZespolona suma 2"){
+    LZespolona x,y,z;
+
+    x.re = 3;
+    x.im = 1;
+
+    y.re = 3;
+    y.im = 5;
+
+    z.re = 6;
+    z.im = 6;
+
+    CHECK((x += y) == z);
+}

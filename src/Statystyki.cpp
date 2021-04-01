@@ -22,10 +22,13 @@ l_niepoprawna++;
  * 
  */
 void stat::wyswietl() const{
-double procent= ((double)l_poprawna/((double)l_poprawna+(double)l_niepoprawna)) * 100;
 cout<<"Ilosc odpowiedz poprawnych wynosi: "<<l_poprawna<<endl;
 cout<<"Ilosc odpowiedzi niepoprawnych: "<<l_niepoprawna<<endl;
-cout<<"Procent poprawnych odpowiedzi wynosi: "<<procent<<'%'<<endl;
+cout<<"Procent poprawnych odpowiedzi wynosi: "<<this->procent()<<'%'<<endl;
+}
+
+double stat::procent() const{
+    return ((double)this->l_poprawna/((double)this->l_poprawna+(double)this->l_niepoprawna)) * 100;
 }
 
 

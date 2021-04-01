@@ -18,6 +18,7 @@ struct stat
     void dodaj_poprawna();
     void dodaj_niepoprawna();
     void wyswietl() const;
+    double procent() const;
 };
 
 

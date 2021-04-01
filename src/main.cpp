@@ -7,7 +7,7 @@ using namespace std;
 int main(int argc, char **argv)
 {
 
-  if (argc < 2) 
+ if (argc < 2) 
   {
     cout << endl; 
     cout << " Brak opcji okreslajacej rodzaj testu." << endl;
@@ -44,7 +44,7 @@ int main(int argc, char **argv)
       if (Odpowiedz.wczytaj_l() == false)
       {
         s.dodaj_niepoprawna();
-        cout << "Poprawana odpowiedz to: " << endl;
+        cout << "Poprawana odpowiedz to: ";
         cout << Wynik << endl;
       }
       else
@@ -58,7 +58,7 @@ int main(int argc, char **argv)
         {
           s.dodaj_niepoprawna();
           cout << "Twoja odpowiedz to: " << Odpowiedz << endl;
-          cout << "Błąd! Poprawana odpowiedz to: " << endl;
+          cout << "Błąd! Poprawana odpowiedz to: " ;
           cout << Wynik << endl;
         }
       }
@@ -73,4 +73,27 @@ int main(int argc, char **argv)
   cout << endl;
 
   s.wyswietl();
+  
+
+ /*LZespolona a,b,c,d,e;
+ a.re=0;
+ a.im=0;
+cout<<a.arg()<<endl;
+
+
+ b.re=0;
+ b.im=5;
+cout<<b.arg()<<endl;
+
+ c.re=0;
+ c.im=-4;
+cout<<c.arg()<<endl;
+
+ d.re =3;
+ d.im = 0;
+ cout<<d.arg()<<endl;
+ 
+ e.re= -4;
+ e.im = 10;
+cout<<e.arg()<<endl;*/
 }
